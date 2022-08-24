@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/shoppingcart/service_creditcard.php" method="POST" resourcePath="/shoppingcart/service_creditcard.php" id="11fbc9eb-fdd8-4fa5-ab40-f8576349ec7c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="11fbc9eb-fdd8-4fa5-ab40-f8576349ec7cfileName">%2Fshoppingcart%2Fservice_creditcard.php</con:setting>
+  </con:settings>
+  <con:defaultResponse>Success</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:query>
+      <con:name>cc_number</con:name>
+      <con:type>JSONPath</con:type>
+      <con:query>$['cc_number']</con:query>
+      <con:match>1111222233334444</con:match>
+      <con:response>Failure</con:response>
+    </con:query>
+  </con:dispatchConfig>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>CONTAINS</con:parameterOperationType>
+        <con:parameterName>flag</con:parameterName>
+        <con:parameterValue>false</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Failure</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="Success" id="0984674a-c7c9-4a3d-9595-69ed01fbe0d9" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "Status": "Transaction Approved",
+  "Reason": "Approved",
+  "Status Code": 100
+}</con:responseContent>
+  </con:response>
+  <con:response name="Failure" id="a408cab3-886e-4695-bf27-c0b8f8003a4c" httpResponseStatus="200" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "Status": "We cannot send you this",
+  "Reason": "Not Approved",
+  "Status Code": 99
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

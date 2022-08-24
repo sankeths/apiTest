@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Service_creditcard.php" path="/shoppingcart/service_creditcard.php" id="9bc20b36-0f16-4788-ae71-556e5c6abcb7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9bc20b36-0f16-4788-ae71-556e5c6abcb7fileName">Service_creditcard.php</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Service_creditcard.php" id="5c35d852-5d64-434d-b75a-2f660dd9faf7" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ser="http://localhost/shoppingcart/service_creditcard.php">ser:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="54be1cf8-6f2d-4033-b144-b35955ef665e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8080</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Service_creditcard.php 2" id="be86e609-5e6f-41e3-a44c-9826a9fa4968" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>flag</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ser="http://localhost/shoppingcart/service_creditcard.php">ser:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="baf4cbc2-a2b8-4c58-9fa7-35643c023193" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8080</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="flag" value="true"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>flag</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

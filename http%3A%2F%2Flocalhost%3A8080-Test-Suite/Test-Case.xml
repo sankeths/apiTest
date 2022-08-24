@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="d3e788e0-f6e3-4057-a5a1-59c3ea4ee9b3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d3e788e0-f6e3-4057-a5a1-59c3ea4ee9b3fileName">Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="89db8ebe-5185-4a65-844d-9a8e8af2d289">
+    <con:settings/>
+    <con:config service="http://localhost:8080" resourcePath="/shoppingcart/service_creditcard.php" methodName="Service_creditcard.php" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="54be1cf8-6f2d-4033-b144-b35955ef665e" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://sb-se-international.northeurope.cloudapp.azure.com:8090</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="bf806b07-8239-47cd-91cf-e5bf9b373e97" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="efae53b0-5f4d-4280-bbd1-f9e61c3db651" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 2" id="d0b8966f-07e3-4413-8c39-0991b904b895">
+    <con:settings/>
+    <con:config service="http://localhost:8080" resourcePath="/shoppingcart/service_creditcard.php" methodName="Service_creditcard.php 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 2" id="baf4cbc2-a2b8-4c58-9fa7-35643c023193" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8080</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="487ae2db-ace1-4a44-afbe-81f1725e21b7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e5a19d58-d8bd-4e61-8558-2682776095c9" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="flag" value="false"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>flag</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

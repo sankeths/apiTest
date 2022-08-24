@@ -1,5 +1,10 @@
 http%3A%2F%2Flocalhost\Get_login.xml
 http%3A%2F%2Flocalhost\get_products.xml
+http%3A%2F%2Flocalhost%3A8080\Service_creditcard.php.xml
 http%3A%2F%2Flocalhost-Test-Suite\Login.xml
 http%3A%2F%2Flocalhost-Test-Suite\Products.xml
+http%3A%2F%2Flocalhost%3A8080-Test-Suite\Test-Case.xml
 E2E-Performance-Test.xml
+From-Scratch\%2Fshoppingcart%2Fservice_creditcard.php.xml
+From-Scratch\%2Fshoppingcart%2Fservice_creditcard.php1.xml
+From-Scratch\%2FgetBalance.xml
